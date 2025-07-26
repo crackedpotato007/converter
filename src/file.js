@@ -1,5 +1,5 @@
-import path from 'node:path'
-import { fileExists } from './fs.js'
+const path = require('node:path');
+const { fileExists } = require('./fs.js');
 
 /**
  * File model
@@ -83,4 +83,4 @@ class File {
   }
 }
 
-export default File
+module.exports = File;

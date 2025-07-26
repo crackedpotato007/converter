@@ -1,4 +1,4 @@
-import fs from 'node:fs'
+const fs = require('node:fs') 
 
 const exists = (path) => fs.existsSync(path)
 
@@ -35,4 +35,4 @@ const deleteFile = (path) => {
   return fs.unlinkSync(path)
 }
 
-export { exists, folderExists, fileExists, getFileName, deleteFile, copyFile }
+module.exports = { exists, folderExists, fileExists, getFileName, deleteFile, copyFile }

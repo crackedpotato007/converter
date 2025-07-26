@@ -1,6 +1,6 @@
-import { exec, execSync } from 'node:child_process'
-import File from './file.js'
-import { fileExists, folderExists, getFileName } from './fs.js'
+const { exec, execSync } = require('node:child_process');
+const File = require('./file.js');
+const { fileExists, folderExists, getFileName } = require('./fs.js');
 
 /**
  * @typedef {object} ConvertResult
@@ -154,5 +154,13 @@ class Converter {
   }
 }
 
-export default Converter
-export { Converter, File, folderExists, fileExists, getFileName }
+module.exports = {
+  Converter,
+  File,
+  folderExists,
+  fileExists,
+  getFileName
+};
+
+// If you want a default export too:
+module.exports.default = Converter;
